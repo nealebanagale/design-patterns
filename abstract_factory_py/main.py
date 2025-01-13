@@ -1,13 +1,15 @@
-from model.abstract_factory import LargeRedSquareFactory, SmallBlueCircleFactory
+from furniture_factory import VictorianFurnitureFactory, ModernFurnitureFactory
 
 
 def main():
-    for factory in (SmallBlueCircleFactory(), LargeRedSquareFactory()):
-        size = factory.set_size()
-        size.size()
-        color = factory.set_color()
-        color.color()
+    for factory in (VictorianFurnitureFactory(), ModernFurnitureFactory()):
+        chair = factory.create_chair()
+        coffe_table = factory.create_coffe_table()
+        sofa = factory.create_sofa()
 
+        chair.sitOn()
+        coffe_table.putOn()
+        sofa.sitOn()
 
 
 if __name__ == '__main__':

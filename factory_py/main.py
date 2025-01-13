@@ -1,14 +1,15 @@
 #!/usr/bin/env/python3
-from shape_factory import ShapeFactory
+from logistics_factory import RoadLogistics, SeaLogistics
 
 
 def main():
-    factory = ShapeFactory()
-    square = factory.getShape('square')
-    square.draw()
-    circle = factory.getShape('circle')
-    circle.draw()
+    # truck
+    road_logistics = RoadLogistics()
+    road_logistics.plan_delivery()
 
+    # ship
+    sea_logistics = SeaLogistics()
+    sea_logistics.plan_delivery()
 
 
 if __name__ == '__main__':
